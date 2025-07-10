@@ -1,8 +1,10 @@
+import UsersList from "./components/UsersList";
+
 function App(){
     return (
-        <>
-            <p>Hello...</p>
-        </>
+        <div className="container mx-auto">
+            <UsersList />
+        </div>
     );
 }
 
