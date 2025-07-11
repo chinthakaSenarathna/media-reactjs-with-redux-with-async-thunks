@@ -2,7 +2,11 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const fetchUsers = createAsyncThunk('users/fetch', async() => {
-    const response = await axios.get('https://localhost:3005/users');
+    const response = await axios.get('http://localhost:3005/users');
+
+    // DEV only...
+    await pause(1000);
+
     console.log(response);
     return response.data;
 });
@@ -11,5 +15,12 @@ const fetchUsers = createAsyncThunk('users/fetch', async() => {
 // fetchUsers.pending    ---> 'users/fetch/pending'
 // fetchUsers.fulfilled  ---> 'users/fetch/fulfilled'
 // fetchUsers.rejected   ---> 'users/fetch/rejected'
+
+// DEV only...
+const pause = (duration) => {
+    return new Promise((resolve) => {
+        setTimeout(resolve,duration);
+    });
+};
 
 export { fetchUsers };
