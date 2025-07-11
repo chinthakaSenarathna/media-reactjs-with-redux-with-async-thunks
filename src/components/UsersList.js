@@ -15,16 +15,26 @@ function UsersList(){
     },[dispatch]);
 
     if(isLoading){
-        return <Skeleton times={6} className='h-10 w-full'/>
+        return <Skeleton times={2} className='h-10 w-full'/>
     }
 
     if(error){
         return <h2>Error occured in fetching data...</h2>
     }
 
+    const renderedUsers = data.map((user) => {
+        return (
+            <div key={user.id} className="mb-2 border rounded">
+                <div className="flex p-2 justify-between items-center cursor-pointer">
+                    {user.name}
+                </div>
+            </div>
+        );
+    });
+
     return (
         <div>
-            {data.length}
+            {renderedUsers}
         </div>
     );
 }
