@@ -1,8 +1,34 @@
 {
-    "users": [
-        { "id":1, "name":"chithaka" },
-        { "id":2, "name":"paramee" }
-    ],
-    "albums": [],
-    "photos": []
+  "users": [
+    {
+      "id": "215a",
+      "name": "Blake Murazik-Gerlach"
+    },
+    {
+      "id": "a338",
+      "name": "Jackie Sporer"
+    },
+    {
+      "id": "9a36",
+      "name": "Alton Mante"
+    },
+    {
+      "id": "ed0d",
+      "name": "Dr. Sergio Conroy"
+    },
+    {
+      "id": "8977",
+      "name": "Lynn Homenick"
+    },
+    {
+      "id": "9692",
+      "name": "Barry Rutherford"
+    },
+    {
+      "id": "e55f",
+      "name": "Shannon Pacocha"
+    }
+  ],
+  "albums": [],
+  "photos": []
 }
